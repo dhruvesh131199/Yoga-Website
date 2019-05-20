@@ -1,0 +1,27 @@
+footer{
+	background: $footer-background;
+
+	p{
+		color: $white;
+		width: 100%;
+		margin: 0;
+		margin-bottom: 1em;
+		font-size: .87em;
+	}
+}
+
+.footer-logo{
+	margin: 1em 0;
+	position: relative;
+	width: 50%;
+	height: 50%;
+	left: 50%;
+	transform: translatex(-50%);
+	max-width: 100px;
+}
+
+.designed-by{
+	font-size: .7em;
+	margin-bottom: 3.5em;
+	color: $grey-secondary;
+}

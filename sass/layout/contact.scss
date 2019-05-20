@@ -1,0 +1,102 @@
+.contacts{
+	margin-top: 5em;
+	background: $grey;
+
+	@media(min-width: 768px){
+		margin-top: 7em;
+		padding-bottom: 3em;
+	}
+}
+
+.contact-heading{
+	position: relative;
+	color: white;
+	display: inline-block;
+	padding: .15em .8em;
+	transform: translatey(-50%);
+	margin: 0 auto;
+	width: 70%;
+
+	&::before{
+		position: absolute;
+		content: "";
+		background: $main;
+		top: 0;
+		left:0;
+		bottom: 0;
+		right: 0;
+		border-radius: 10px;
+		z-index: -2;
+	}
+
+	@media(min-width: 768px){
+		width: 50%;
+		padding: .5em 1em;
+	}
+}
+
+.contact{
+	width: 100%;
+
+	&:last-of-type{
+		margin-bottom: 2em;
+	}
+
+	@media(min-width: 768px){
+		position: relative;
+		width: 50%;
+		border: $white 1px solid;
+		padding: 1.5em 2.5em;
+
+		&:last-of-type{
+			margin-bottom: auto;
+		}
+	}
+
+}
+
+.contact-detail{
+	position: relative;
+	margin-top: 1em;
+
+	span{
+		color: $black;
+	}
+	a{
+		color: $black;
+		text-decoration: none;
+
+		&:hover{
+			color: grey;
+		}
+	}
+
+	@media(min-width: 768px){
+	}
+}
+
+.contact h4{
+
+	display: inline-block;
+
+	&::after{
+		content: "";
+		display: block;
+		position: absolute;
+		background: $grey;
+		border-top: 4px $main solid;
+		width: 40%;
+		left: 50%;
+		transform: translatex(-50%);
+		margin-top: 1em;
+	}
+
+	@media(min-width: 768px){
+		margin-top: 0;
+
+		&::after{
+			width: 40%;
+			position: absolute;
+		}
+	}
+}

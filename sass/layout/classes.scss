@@ -1,0 +1,101 @@
+.classes{
+	margin-top: 3.5em;
+}
+
+.class-heading{
+	position: relative;
+	color: $main;
+	margin-bottom: 2.5em;
+	
+	&::after{
+		position: absolute;
+		display: block;
+		content: "";
+		background: $grey;
+		width: 50%;
+		border: 1px solid $grey;
+		left: 50%;
+		transform: translatex(-50%);
+		margin-top: 1em;
+	}
+
+	@media(min-width: 768px){
+		margin-top: 3em;
+	}
+}
+
+.class{
+	position: relative;
+	margin-bottom: 0;
+	background: $black;
+	overflow: hidden;
+
+	&:first-of-type{
+		margin-top: 1em;
+	}
+
+	@media(min-width: 768px){
+		margin: 0;
+		padding: 0;
+		width: 50%;
+
+		&:first-of-type{
+			margin-top: 0;
+		}
+	}
+}
+.class-img{
+	display: block;
+	transition: transform ease 350ms,
+				opacity ease 200ms;
+
+	.class:hover &{
+		transform: scale(1.2);
+		opacity: .4;
+	}
+}
+
+.class-body{
+	position: absolute;
+	padding: 1.4em;
+	width: 100%;
+	left: 50%;
+	bottom: 0;
+	z-index: 2;
+	transform: translatex(-50%);
+	background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+	color: white;
+	min-height: 50%;
+
+	h2{
+		font-size: 1em;
+		color: $white;
+		margin-bottom: 0;
+		margin-top: 0;
+		border: 1.25px solid $main;
+	}
+
+	p{
+		font-size: 1em;
+		margin-top: 0
+	}
+}
+
+.btn-secondary{
+	background: $main;
+	color: $white;
+	padding: .35em 1.7em;
+	border-radius: 5px;
+
+	&:hover{
+		background: $main-secondary;
+	}
+}
+
+
+
+
+
+
+
+

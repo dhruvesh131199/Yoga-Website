@@ -1,0 +1,136 @@
+header{
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: $white;
+	opacity: .8;
+}
+
+.logo{
+	width: 8.8%;
+	height: 8.8%;
+	max-width: 60px;
+	padding: .6em 0;
+	cursor: pointer;
+}
+
+.main-nav{
+	position: relative;
+	top: 100%;
+	margin-top: 0;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height ease-out 350ms;
+
+	@media(min-width: 768px){
+		position: absolute;
+		max-height: 1000px;	
+		width: auto;
+		right: 0;
+		top: 50%;
+		transform: translatey(-50%);
+	}
+
+	ul{
+		position: relative;
+		margin-top: 0;
+		list-style: none;
+		text-align: left;
+		background: $white;
+
+		@media(min-width: 768px){
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	li{
+		position: relative;
+		text-transform: uppercase;
+		padding: 1.5em;
+		transition: all ease .2s;
+
+		@media(min-width: 768px){
+			padding: .8em;
+
+			&:first-of-type{
+				padding-left: 0;
+			}
+
+			&:last-of-type{
+				padding-right: 0;
+			}
+		}
+	}
+
+	a{
+		color: $black;
+		text-decoration: none;
+		font-weight: $font-bold;
+
+		&:hover{
+			color: $main;
+		}
+	}
+
+}
+
+.main-nav--open{
+	max-height: 1000px;
+	transition: max-height ease-out 350ms;
+}
+
+//hamburger============================
+
+.nav-toggle{
+	padding: 1em;
+  	position: absolute;
+ 	 top: .5em;
+  	right: .5em;
+  	cursor: pointer;
+
+  	@media(min-width: 768px){
+  		display: none;
+  	}
+}
+
+.hamburger, .hamburger::before, .hamburger::after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 2em;
+	height: 3px;
+	background: $black;
+}
+
+.hamburger::before{
+	transform: translatey(-6px);
+}
+
+.hamburger::after{
+	transform: translatey(6px);
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  transform: translatey(6px);
+  transform: rotate(270deg);
+}
+
+.open .hamburger::after {
+  opacity: 0;
+}
+
+
+
+
+
+

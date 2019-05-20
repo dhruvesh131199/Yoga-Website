@@ -1,0 +1,23 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	text-align: center;
+}
+
+.grid{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.container{
+	position: relative;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+img{
+	max-width: 100%;
+}
